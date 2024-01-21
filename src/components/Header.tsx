@@ -8,7 +8,7 @@ function Header() {
         <Image src="/logo.png" alt="Xue DAO logo" width={150} height={150} />
         <span className="sr-only">XueDAO</span>
       </Link>
-      <nav className="ml-auto flex gap-4 sm:gap-6">
+      <nav className="ml-auto flex flex-row gap-4 sm:flex-row sm:gap-6">
         <Link
           className="text-md font-medium underline-offset-4 hover:underline"
           href="#"
