@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   description: "Xue DAO, a student-run DAO for students.",
   icons: {
     icon: "/logo-square.png",
-  }
+  },
 };
 
 export default function RootLayout({
