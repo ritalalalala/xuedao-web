@@ -28,18 +28,20 @@ export default function Home() {
               lifelong learners.
             </p>
             <div className="mt-8 flex flex-col gap-2 min-[400px]:flex-row sm:flex-row">
-              <Link
-                className="inline-flex h-10 items-center justify-center rounded-md bg-blue-600 px-8 text-sm font-medium text-gray-50 shadow transition-colors hover:bg-blue-700 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-blue-700 disabled:pointer-events-none disabled:opacity-50"
-                href="#"
-              >
-                Join Us
-              </Link>
-              <Link
-                className="disabled:opacity-500 inline-flex h-10 items-center justify-center rounded-md bg-white px-8 text-sm font-medium shadow-sm transition-colors hover:bg-gray-100 hover:text-gray-900 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none"
-                href="#"
-              >
-                Learn More
-              </Link>
+              <div className="flex flex-row gap-2">
+                <Link
+                  className="inline-flex h-10 items-center justify-center rounded-md bg-blue-600 px-8 text-sm font-medium text-gray-50 shadow transition-colors hover:bg-blue-700 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-blue-700 disabled:pointer-events-none disabled:opacity-50"
+                  href="#"
+                >
+                  Join Us
+                </Link>
+                <Link
+                  className="disabled:opacity-500 inline-flex h-10 items-center justify-center rounded-md bg-white px-8 text-sm font-medium shadow-sm transition-colors hover:bg-gray-100 hover:text-gray-900 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none"
+                  href="#"
+                >
+                  Learn More
+                </Link>
+              </div>
             </div>
           </div>
           <div className="mt-8 flex flex-col sm:mt-0">
@@ -71,7 +73,7 @@ export default function Home() {
               <ul className="grid gap-6">
                 <li>
                   <div className="grid gap-1">
-                    <h3 className="text-2xl font-bold text-blue-900">
+                    <h3 className="text-2xl font-bold text-blue-900 sm:text-3xl md:text-4xl">
                       Education
                     </h3>
                     <p className="text-gray-500">
@@ -82,7 +84,7 @@ export default function Home() {
                 </li>
                 <li>
                   <div className="grid gap-1">
-                    <h3 className="text-2xl font-bold text-blue-900">
+                    <h3 className="text-2xl font-bold text-blue-900 sm:text-3xl md:text-4xl">
                       Networking
                     </h3>
                     <p className="text-gray-500 ">
@@ -93,7 +95,7 @@ export default function Home() {
                 </li>
                 <li>
                   <div className="grid gap-1">
-                    <h3 className="text-2xl font-bold text-blue-900">
+                    <h3 className="text-2xl font-bold text-blue-900 sm:text-3xl md:text-4xl">
                       Governance
                     </h3>
                     <p className="text-gray-500">
