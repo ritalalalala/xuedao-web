@@ -49,9 +49,10 @@ export default function Home() {
                   href="#"
                   onClick={(e) => {
                     e.preventDefault();
-                    document
-                      .getElementById("why-join")
-                      .scrollIntoView({ behavior: "smooth" });
+                    const element = document.getElementById("why-join");
+                    if (element) {
+                      element.scrollIntoView({ behavior: "smooth" });
+                    }
                   }}
                 >
                   Learn More
