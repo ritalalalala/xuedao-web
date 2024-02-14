@@ -137,7 +137,12 @@ export default function Home() {
             </div>
           </div>
           <div className="mt-8">
-            <Grid container spacing={4} justifyContent="center">
+            <Grid
+              container
+              spacing={4}
+              alignItems="center"
+              justifyContent="center"
+            >
               {members.map((name, index) => (
                 <Grid item key={index} xs={6} sm={4} md={3} lg={2}>
                   <Box textAlign="center" p={1}>
@@ -153,7 +158,7 @@ export default function Home() {
                       <Avatar
                         alt={name}
                         src={`/core-contributors/${name}.png`}
-                        sx={{ width: 160, height: 160 }}
+                        sx={{ width: 144, height: 144 }}
                       />
                     </Paper>
                     <Typography

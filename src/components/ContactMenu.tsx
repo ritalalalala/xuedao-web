@@ -18,8 +18,13 @@ export default function BasicMenu() {
   };
 
   return (
-    <div className="text-md font-medium underline-offset-4 hover:underline">
-      <button onClick={handleClick}>Contact</button>
+    <div>
+      <button
+        className="underline-offset-4 hover:underline"
+        onClick={handleClick}
+      >
+        Contact
+      </button>
       <Menu
         id="basic-menu"
         anchorEl={anchorEl}
