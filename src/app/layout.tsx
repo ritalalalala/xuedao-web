@@ -28,7 +28,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={roboto.className}>
-        <div className="flex min-h-screen flex-col py-12">
+        <div className="flex min-h-screen flex-col py-10">
           <Header />
           {children}
           <Footer />

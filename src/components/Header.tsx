@@ -1,9 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
 
+import ContactMenu from "@/components/ContactMenu";
+
 function Header() {
   return (
-    <div className="flex h-14 items-center px-12 lg:px-16">
+    <div className="sticky top-0 z-10 flex h-20 items-center bg-white px-12 lg:px-16">
       <Link className="flex items-center justify-center" href="/">
         <Image src="/logo.png" alt="Xue DAO logo" width={150} height={150} />
         <span className="sr-only">XueDAO</span>
@@ -11,13 +13,8 @@ function Header() {
       <nav className="ml-auto flex flex-row gap-4 sm:flex-row sm:gap-6">
         <Link
           className="text-md font-medium underline-offset-4 hover:underline"
-          href="#"
-        >
-          Membership
-        </Link>
-        <Link
-          className="text-md font-medium underline-offset-4 hover:underline"
-          href="#"
+          href="https://lu.ma/calendar/cal-Pj8ibnEe0RyZsPH"
+          target="_blank"
         >
           Events
         </Link>
@@ -27,12 +24,7 @@ function Header() {
         >
           Resources
         </Link>
-        <Link
-          className="text-md font-medium underline-offset-4 hover:underline"
-          href="#"
-        >
-          Contact
-        </Link>
+        <ContactMenu />
       </nav>
     </div>
   );

@@ -1,16 +1,24 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 
 import { Avatar, Grid, Typography, Box, Paper } from "@mui/material";
 
 export default function Home() {
-  //TODO: Replace with actual team members from DB
-  const mockTeamMembers = [
-    { src: "/member1.png", name: "Alice", role: "Developer" },
-    { src: "/member2.png", name: "Bob", role: "Designer" },
-    { src: "/member3.png", name: "Charlie", role: "Product Manager" },
-    { src: "/member4.png", name: "David", role: "Marketing Specialist" },
-    { src: "/member5.png", name: "Eve", role: "Data Analyst" },
+  const members = [
+    "Jennifer",
+    "Kevin",
+    "Tim",
+    "Albert",
+    "Johnny",
+    "Terrance",
+    "Louis",
+    "Moven",
+    "Vincent",
+    "HongRu",
+    "Jourden",
+    "Rita",
   ];
 
   return (
@@ -31,13 +39,20 @@ export default function Home() {
               <div className="flex flex-row gap-2">
                 <Link
                   className="inline-flex h-10 items-center justify-center rounded-md bg-blue-600 px-8 text-sm font-medium text-gray-50 shadow transition-colors hover:bg-blue-700 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-blue-700 disabled:pointer-events-none disabled:opacity-50"
-                  href="#"
+                  href="https://forms.gle/WAm4n1KiKeYksWj19"
+                  target="_blank"
                 >
                   Join Us
                 </Link>
                 <Link
                   className="disabled:opacity-500 inline-flex h-10 items-center justify-center rounded-md bg-white px-8 text-sm font-medium shadow-sm transition-colors hover:bg-gray-100 hover:text-gray-900 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none"
                   href="#"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    document
+                      .getElementById("why-join")
+                      .scrollIntoView({ behavior: "smooth" });
+                  }}
                 >
                   Learn More
                 </Link>
@@ -58,7 +73,10 @@ export default function Home() {
         <div className="container mx-auto px-4 md:px-6">
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
             <div className="space-y-2">
-              <h2 className="text-3xl font-bold text-blue-900 sm:text-5xl">
+              <h2
+                className="text-3xl font-bold text-blue-900 sm:text-5xl"
+                id="why-join"
+              >
                 Why Join XueDAO?
               </h2>
               <p className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
@@ -113,28 +131,28 @@ export default function Home() {
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
             <div className="space-y-2">
               <h2 className="text-3xl font-bold text-blue-900 sm:text-5xl">
-                Active Contributors
+                Core Contributors
               </h2>
             </div>
           </div>
           <div className="mt-8">
             <Grid container spacing={4} justifyContent="center">
-              {mockTeamMembers.map((member, index) => (
+              {members.map((name, index) => (
                 <Grid item key={index} xs={6} sm={4} md={3} lg={2}>
                   <Box textAlign="center" p={1}>
                     <Paper
                       elevation={4}
                       sx={{
-                        p: 2,
+                        p: 1,
                         borderRadius: "50%",
                         display: "inline-block",
                         mb: 2,
                       }}
                     >
                       <Avatar
-                        alt={member.name}
-                        src={member.src}
-                        sx={{ width: 128, height: 128 }}
+                        alt={name}
+                        src={`/core-contributors/${name}.png`}
+                        sx={{ width: 160, height: 160 }}
                       />
                     </Paper>
                     <Typography
@@ -142,10 +160,7 @@ export default function Home() {
                       component="h3"
                       sx={{ fontWeight: "medium", color: "text.primary" }}
                     >
-                      {member.name}
-                    </Typography>
-                    <Typography variant="body2" color="text.secondary">
-                      {member.role}
+                      {name}
                     </Typography>
                   </Box>
                 </Grid>
